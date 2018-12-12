@@ -6,10 +6,15 @@ WebMainWin::WebMainWin(QWidget *parent) :
     ui(new Ui::WebMainWin)
 {
     ui->setupUi(this);
-    ui->webAxWidget->dynamicCall("Navigate(const QString&)", "http://www.baidu.com");
+    this->setWindowTitle(" ");
 }
 
 WebMainWin::~WebMainWin()
 {
     delete ui;
+}
+
+void WebMainWin::navigate(QString url)
+{
+        ui->webAxWidget->dynamicCall("Navigate(const QString&)", url);
 }

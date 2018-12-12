@@ -15,6 +15,8 @@ public:
     explicit WebMainWin(QWidget *parent = nullptr);
     ~WebMainWin();
 
+    void navigate(QString url);
+
 private:
     Ui::WebMainWin *ui;
 };
